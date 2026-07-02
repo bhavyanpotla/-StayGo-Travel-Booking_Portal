@@ -600,3 +600,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+function handleSubmit(event) {
+    event.preventDefault();
+    
+    // Check if user came from the services page
+    const cameFromServices = document.referrer.includes('services.html');
+    const nameInput = document.getElementById('custName');
+    const name = nameInput ? nameInput.value : "Guest";
+
+    if (cameFromServices) {
+        // SCENARIO A: Booking confirmation
+        const btn = event.target.querySelector('button[type="submit"]');
+        const originalText = btn.innerText;
+        btn.innerText = "Processing...";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            alert("Success, " + name + "! Your transaction is confirmed.");
+            document.getElementById('checkout-pipeline-form').reset();
+            btn.innerText = originalText;
+            btn.disabled = false;
+        }, 2000);
+    } else {
+        // SCENARIO B: Force redirect to pick a package first
+        alert("Please select a service package first.");
+        window.location.href = "services.html";
+    }
+}
