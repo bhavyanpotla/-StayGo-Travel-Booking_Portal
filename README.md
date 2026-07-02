@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ### 🔗 Quick Access
-* **Live Demo:** [https://grand-donut-37910d.netlify.app](https://grand-donut-37910d.netlify.app)
+* **Live Demo:** [https://grand-donut-37910d.netlify.app](https://stay-g0.netlify.app/)
 * **Owner:** Bhavyan Naidu
 
 ---
