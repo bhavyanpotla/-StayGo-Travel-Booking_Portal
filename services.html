@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | StayGo Premium Hotel & Travel</title>
+    <meta name="description" content="Explore our premium hotel rooms and curated travel packages. Choose StayGo for your next adventure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="loader"><span></span><span></span><span></span></div>
+    <div class="gradient-bg"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fa-solid fa-earth-americas"></i><span>StayGo</span></a>
+                <ul class="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                </ul>
+                <div class="navButtons">
+                    <a href="booking.html" class="bookBtn">Book Now</a>
+                    <div class="menuBtn"><i class="fa-solid fa-bars"></i></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services" style="padding-top: 160px; min-height: 100vh;">
+        <div class="container">
+            <div class="sectionTitle reveal">
+                <span>Our Services</span>
+                <h2>What We Offer</h2>
+            </div>
+            
+            <div class="galleryFilter reveal">
+                <button class="filterBtn active" data-filter="all">All Services</button>
+                <button class="filterBtn" data-filter="hotel"><i class="fa-solid fa-hotel"></i> Hotels</button>
+                <button class="filterBtn" data-filter="travel"><i class="fa-solid fa-plane"></i> Travel Packages</button>
+            </div>
+
+            <div class="galleryGrid">
+                
+                <article class="hotelCard galleryItem" data-category="hotel">
+                    <div class="hotelImage">
+                        <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=80" alt="Luxury Suite">
+                        <span class="price">$320 / Night</span>
+                    </div>
+                    <div class="hotelContent">
+                        <h3>Ocean Paradise Suite</h3>
+                        <p>Maldives • Sea View • Breakfast Included</p>
+                        <a href="booking.html" class="cardBtn">Book Room</a>
+                    </div>
+                </article>
+
+                <article class="packageCard galleryItem" data-category="travel">
+                    <div class="packageImage">
+                        <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=800&q=80" alt="Bali Package">
+                        <span class="packageBadge">Best Seller</span>
+                    </div>
+                    <div class="packageContent">
+                        <h3>Bali 7-Day Escape</h3>
+                        <p>Flights • 5-Star Resort • Guided Tours</p>
+                        <div class="packageFooter">
+                            <h4>$899</h4>
+                            <a href="booking.html" class="cardBtn">Book Tour</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hotelCard galleryItem" data-category="hotel">
+                    <div class="hotelImage">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="City View Room">
+                        <span class="price">$290 / Night</span>
+                    </div>
+                    <div class="hotelContent">
+                        <h3>Skyline Grand Room</h3>
+                        <p>Dubai • City View • Spa Access</p>
+                        <a href="booking.html" class="cardBtn">Book Room</a>
+                    </div>
+                </article>
+
+                <article class="packageCard galleryItem" data-category="travel">
+                    <div class="packageImage">
+                        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" alt="Swiss Tour">
+                        <span class="packageBadge">Winter Special</span>
+                    </div>
+                    <div class="packageContent">
+                        <h3>Swiss Alps Adventure</h3>
+                        <p>Trains • Ski Lodge • Hot Springs</p>
+                        <div class="packageFooter">
+                            <h4>$1299</h4>
+                            <a href="booking.html" class="cardBtn">Book Tour</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hotelCard galleryItem" data-category="hotel">
+                    <div class="hotelImage">
+                        <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=800&q=80" alt="Santorini Villa">
+                        <span class="price">$450 / Night</span>
+                    </div>
+                    <div class="hotelContent">
+                        <h3>Santorini Clifftop Villa</h3>
+                        <p>Greece • Private Pool • Sunset View</p>
+                        <a href="booking.html" class="cardBtn">Book Room</a>
+                    </div>
+                </article>
+
+                <article class="packageCard galleryItem" data-category="travel">
+                    <div class="packageImage">
+                        <img src="https://images4.alphacoders.com/136/thumb-1920-1366686.jpeg">
+                    </div>
+                    <div class="packageContent">
+                        <h3>Tokyo City Explorer</h3>
+                        <p>Bullet Train • City Tours • Local Cuisine</p>
+                        <div class="packageFooter">
+                            <h4>$1050</h4>
+                            <a href="booking.html" class="cardBtn">Book Tour</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hotelCard galleryItem" data-category="hotel">
+                    <div class="hotelImage">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="NY Penthouse">
+                        <span class="price">$600 / Night</span>
+                    </div>
+                    <div class="hotelContent">
+                        <h3>New York Penthouse</h3>
+                        <p>USA • Skyline View • Luxury Amenities</p>
+                        <a href="booking.html" class="cardBtn">Book Room</a>
+                    </div>
+                </article>
+
+                <article class="packageCard galleryItem" data-category="travel">
+                    <div class="packageImage">
+                        <img src="https://media.bookmundi.com/tour/discover-costa-rica-1282943-1767184977.jpg?format=auto&quality=60&width=768" alt="Costa Rica Safari">
+                        <span class="packageBadge">Eco Tour</span>
+                    </div>
+                    <div class="packageContent">
+                        <h3>Costa Rica Jungle Safari</h3>
+                        <p>Eco Resort • Wildlife Tours • Ziplining</p>
+                        <div class="packageFooter">
+                            <h4>$950</h4>
+                            <a href="booking.html" class="cardBtn">Book Tour</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hotelCard galleryItem" data-category="hotel">
+                    <div class="hotelImage">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80" alt="Paris Hotel">
+                        <span class="price">$380 / Night</span>
+                    </div>
+                    <div class="hotelContent">
+                        <h3>Eiffel View Room</h3>
+                        <p>Paris • Balcony • Romantic Setup</p>
+                        <a href="booking.html" class="cardBtn">Book Room</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footerBottom">
+            <p>&copy; <span id="year"></span> StayGo. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

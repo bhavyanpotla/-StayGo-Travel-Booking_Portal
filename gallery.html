@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | StayGo Premium Hotel & Travel</title>
+    <meta name="description" content="View stunning photos of our luxury resorts, beautiful travel destinations, and unforgettable experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="loader"><span></span><span></span><span></span></div>
+    <div class="gradient-bg"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fa-solid fa-earth-americas"></i><span>StayGo</span></a>
+                <ul class="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                </ul>
+                <div class="navButtons">
+                    <a href="booking.html" class="bookBtn">Book Now</a>
+                    <div class="menuBtn"><i class="fa-solid fa-bars"></i></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="gallery" style="padding-top: 160px; min-height: 100vh;">
+        <div class="container">
+            <div class="sectionTitle reveal">
+                <span>Our Gallery</span>
+                <h2>Moments Worth Remembering</h2>
+            </div>
+            
+            <div class="galleryFilter reveal">
+                <button class="filterBtn active" data-filter="all">All</button>
+                <button class="filterBtn" data-filter="resorts">Resorts</button>
+                <button class="filterBtn" data-filter="destinations">Destinations</button>
+            </div>
+
+            <div class="galleryGrid">
+                
+                <!-- Item 1: Destination -->
+                <div class="galleryItem reveal" data-category="destinations">
+                    <img src="https://i.pinimg.com/736x/55/45/10/5545107df975d7bad4078a04d137697b.jpg">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-ship"></i>
+                        <h3>Amalfi Coast</h3>
+                    </div>
+                </div>
+
+                <!-- Item 2: Resort -->
+                <div class="galleryItem reveal" data-category="resorts">
+                    <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" alt="Royal Penthouse">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-bed"></i>
+                        <h3>Royal Penthouse</h3>
+                    </div>
+                </div>
+
+                <!-- Item 3: Destination -->
+                <div class="galleryItem reveal" data-category="destinations">
+                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" alt="Cappadocia Balloons">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-globe"></i>
+                        <h3>Cappadocia</h3>
+                    </div>
+                </div>
+
+                <!-- Item 4: Resort -->
+                <div class="galleryItem reveal" data-category="resorts">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Luxury Spa">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-spa"></i>
+                        <h3>Luxury Spa Center</h3>
+                    </div>
+                </div>
+
+                <!-- Item 5: Destination -->
+                <div class="galleryItem reveal" data-category="destinations">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Kyoto Japan">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <h3>Kyoto Temples</h3>
+                    </div>
+                </div>
+
+                <!-- Item 6: Resort -->
+                <div class="galleryItem reveal" data-category="resorts">
+                    <img src="https://images.trvl-media.com/lodging/3000000/2790000/2784400/2784399/a536cda8.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-water-ladder"></i>
+                        <h3>Private Oasis</h3>
+                    </div>
+                </div>
+
+                <!-- Item 7: Destination -->
+                <div class="galleryItem reveal" data-category="destinations">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRVkLULwxcDlpNSJNMZ6BRoefEQI1qoqVsLEdZtC4Sag&s=10" alt="Seychelles Beach">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                        <h3>Seychelles Beach</h3>
+                    </div>
+                </div>
+
+                <!-- Item 8: Resort -->
+                <div class="galleryItem reveal" data-category="resorts">
+                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80" alt="Jungle Retreat">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h3>Jungle Retreat</h3>
+                    </div>
+                </div>
+
+                <!-- Item 9: Destination -->
+                <div class="galleryItem reveal" data-category="destinations">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" alt="Alpine Lakes">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                        <h3>Alpine Lakes</h3>
+                    </div>
+                </div>
+
+                <!-- Item 10: Resort -->
+                <div class="galleryItem reveal" data-category="resorts">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdv9zWyTjj-1oqZPl1hM57qJxkw4t9YYkIuybAAdACBA&s=10" alt="Sunset Resort">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-martini-glass-citrus"></i>
+                        <h3>Sunset Resort</h3>
+                    </div>
+                </div>
+
+                <!-- Item 11: Resort -->
+                <div class="galleryItem reveal" data-category="resorts">
+                    <img src="https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&w=800&q=80" alt="Boutique Hotel">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-hot-tub-person"></i>
+                        <h3>Boutique Hotel</h3>
+                    </div>
+                </div>
+
+                <!-- Item 12: Destination (Andhra Pradesh) -->
+                <div class="galleryItem reveal" data-category="destinations">
+                    <img src="https://i0.wp.com/footlooseinme.com/wp-content/uploads/2019/03/featured-1.jpg?fit=6000%2C4000&ssl=1">
+                    <div class="galleryOverlay">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                        <h3>Araku Valley</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footerBottom">
+            <p>&copy; <span id="year"></span> StayGo. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

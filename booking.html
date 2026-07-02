@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Booking Portal | StayGo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* Premium macOS Ultra-Glass Panel */
+        .mac-booking-panel {
+            background: rgba(8, 16, 40, 0.6) !important;
+            backdrop-filter: blur(50px) saturate(200%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 50px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Animated High-Contrast Active Mode Buttons */
+        .glow-btn {
+            cursor: pointer;
+            border-radius: 16px !important;
+            padding: 18px 35px !important;
+            font-size: 1.1rem !important;
+            font-weight: 700 !important;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            background: rgba(255, 255, 255, 0.02) !important;
+            color: #fff !important;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Hotel Active State: Bounces + Indigo Glow */
+        .glow-btn.hotel-mode.active {
+            background: linear-gradient(135deg, #4f46e5, #6366f1) !important;
+            box-shadow: 0 0 30px rgba(79, 70, 229, 0.5);
+            border-color: #6366f1 !important;
+            transform: scale(1.08);
+            animation: bounceJuice 0.6s ease;
+        }
+
+        /* Travel Active State: Bounces + Cyan Glow */
+        .glow-btn.travel-mode.active {
+            background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
+            border-color: #0891b2 !important;
+            transform: scale(1.08);
+            animation: bounceJuice 0.6s ease;
+        }
+
+        /* Pure Black Sleek Input Controls */
+        .dark-input-group input, .dark-input-group select {
+            width: 100%;
+            background: #040814 !important;
+            border: 1px solid #1a243d !important;
+            color: #fff !important;
+            border-radius: 14px !important;
+            padding: 16px 20px !important;
+            font-size: 1rem;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .dark-input-group input:focus, .dark-input-group select:focus {
+            border-color: #06b6d4 !important;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+            background: #060c1f !important;
+        }
+
+        /* Physics Bounce Keyframes */
+        @keyframes bounceJuice {
+            0% { transform: scale(1); }
+            30% { transform: scale(1.15) translateY(-8px); }
+            50% { transform: scale(0.95) translateY(2px); }
+            70% { transform: scale(1.05) translateY(-2px); }
+            100% { transform: scale(1.08) translateY(0); }
+        }
+
+        /* Styling the Date Input to look premium and macOS-like */
+.dark-input-group input[type="date"] {
+    appearance: none;
+    background: #050505 !important;
+    color: #fff !important;
+    border: 1px solid #222 !important;
+    border-radius: 14px !important;
+    padding: 18px 20px !important;
+    cursor: pointer;
+}
+
+/* The actual calendar icon color */
+.dark-input-group input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(1.5);
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="loader"><span></span><span></span><span></span></div>
+    <div class="gradient-bg"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fa-solid fa-earth-americas"></i><span>StayGo</span></a>
+                <ul class="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section style="padding-top: 150px; padding-bottom: 100px; min-height: 100vh; display: flex; align-items: center;">
+        <div class="container" style="max-width: 780px; position: relative;">
+            
+            
+
+            <!-- macOS Interface Form Panel -->
+            <div class="mac-booking-panel reveal">
+                <div class="sectionTitle" style="margin-bottom: 35px; text-align: center;">
+                    <span style="letter-spacing: 3px; font-weight: 700;">Engineered Checkout</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Configure Order Pipeline</h2>
+                </div>
+
+                <!-- Bouncing Colored Action Options -->
+                <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px;">
+                    <button class="glow-btn hotel-mode active" id="hotel-tab" onclick="togglePlatform('hotel')">
+                        <i class="fa-solid fa-hotel"></i> Luxury Stays
+                    </button>
+                    <button class="glow-btn travel-mode" id="travel-tab" onclick="togglePlatform('travel')">
+                        <i class="fa-solid fa-plane-departure"></i> Tour Packages
+                    </button>
+                </div>
+                
+                <!-- Unified Core Inputs -->
+                <form id="checkout-pipeline-form" onsubmit="processRouting(e)">
+                    <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="dark-input-group">
+                            <label style="font-size: 0.85rem; font-weight: 600; opacity: 0.8; text-transform: uppercase;">Lead Purchaser Name</label>
+                            <input type="text" placeholder="Bhavyan Potla" required>
+                        </div>
+                        <div class="dark-input-group">
+                            <label style="font-size: 0.85rem; font-weight: 600; opacity: 0.8; text-transform: uppercase;">Secure Communications Email</label>
+                            <input type="email" placeholder="bhavyan_potla@domain.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Sub-forms Container -->
+                    <div id="dynamic-fields-wrapper" style="margin-top: 20px;">
+                        <!-- Injected automatically by JS below -->
+                    </div>
+
+                    <button type="button" onclick="executeSystemRedirect()" class="searchBtn" style="width: 100%; margin-top: 35px; padding: 20px !important; border-radius: 14px !important; font-size: 1.1rem; letter-spacing: 1px;">
+                        Initialize Secure Routing <i class="fa-solid fa-arrow-right-to-bracket" style="margin-left: 8px;"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Execution Scripts -->
+    <script>
+        let currentSelection = 'hotel';
+
+        const fieldsCatalog = {
+            hotel: `
+                <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; animation: fadeIn 0.4s ease;">
+                    <div class="dark-input-group"><label style="font-size: 0.85rem; font-weight: 600; opacity: 0.8;">CHECK-IN DATE</label><input type="date" required></div>
+                    <div class="dark-input-group"><label style="font-size: 0.85rem; font-weight: 600; opacity: 0.8;">CHECK-OUT DATE</label><input type="date" required></div>
+                </div>
+                <div class="dark-input-group" style="margin-top: 20px; animation: fadeIn 0.4s ease;">
+                    <label style="font-size: 0.85rem; font-weight: 600; opacity: 0.8;">ROOM ALLOCATION SIZE</label>
+                    <select required>
+                        <option>1 Guest (Solo Executive Suite)</option>
+                        <option selected>2 Guests (Double Premium Suite)</option>
+                        <option>3 Guests (Master Family Suite)</option>
+                        <option>4+ Guests (VIP Presidential Villa)</option>
+                    </select>
+                </div>
+            `,
+            travel: `
+                <div class="dark-input-group" style="animation: fadeIn 0.4s ease;">
+                    <label style="font-size: 0.85rem; font-weight: 600; opacity: 0.8;">TARGET ADVENTURE DESTINATION</label>
+                    <select required>
+                        <option>Araku Valley Scenic Tour (Andhra Pradesh)</option>
+                        <option>Maldives Overwater Bungalow Experience</option>
+                        <option>Swiss Alps Winter Alpine Expedition</option>
+                        <option>Dubai Premium Urban City Skyline Package</option>
+                    </select>
+                </div>
+                <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; animation: fadeIn 0.4s ease;">
+                    <div class="dark-input-group"><label style="font-size: 0.85rem; font-weight: 600; opacity: 0.8;">DEPARTURE TIMESTAMP</label><input type="date" required></div>
+                    <div class="dark-input-group"><label style="font-size: 0.85rem; font-weight: 600; opacity: 0.8;">TRAVEL FLIGHT CLASS</label>
+                        <select>
+                            <option>Premium Economy</option>
+                            <option selected>Business Class</option>
+                            <option>First Class Suite</option>
+                        </select>
+                    </div>
+                </div>
+            `
+        };
+
+        function togglePlatform(mode) {
+            currentSelection = mode;
+            document.getElementById('hotel-tab').classList.remove('active');
+            document.getElementById('travel-tab').classList.remove('active');
+            
+            if(mode === 'hotel') {
+                document.getElementById('hotel-tab').classList.add('active');
+            } else {
+                document.getElementById('travel-tab').classList.add('active');
+            }
+            renderDynamicInputs();
+        }
+
+        function renderDynamicInputs() {
+            document.getElementById('dynamic-fields-wrapper').innerHTML = fieldsCatalog[currentSelection];
+        }
+
+        function executeSystemRedirect() {
+            // High-end dynamic URL targeting based on active layout state
+            if(currentSelection === 'hotel') {
+                window.location.href = "services.html?filter=hotel#services";
+            } else {
+                window.location.href = "services.html?filter=travel#services";
+            }
+        }
+
+        // Initialize view on system load
+        document.addEventListener("DOMContentLoaded", renderDynamicInputs);
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

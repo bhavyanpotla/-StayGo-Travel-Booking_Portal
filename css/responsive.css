@@ -1,0 +1,639 @@
+/*=========================================
+    RESPONSIVE CSS
+    STAYGO HOTEL WEBSITE
+==========================================*/
+
+/*=========================================
+        LARGE DEVICES (1200px)
+==========================================*/
+
+@media (max-width:1200px){
+
+.container{
+    width:94%;
+}
+
+/* Hero */
+
+.heroContainer{
+    gap:50px;
+}
+
+.heroContent h1{
+    font-size:3.8rem;
+}
+
+.heroImage img{
+    height:600px;
+    object-fit:cover;
+}
+
+/* Booking */
+
+.bookingForm{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.searchBtn{
+    width:100%;
+}
+
+/* Destination */
+
+.destinationGrid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+/* Hotels */
+
+.hotelGrid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+/* Packages */
+
+.packageGrid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+/* Stats */
+
+.statsGrid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/*=========================================
+        LAPTOP (992px)
+==========================================*/
+
+@media (max-width:992px){
+
+section{
+    padding:90px 0;
+}
+
+/* Navigation */
+
+.menuBtn{
+    display:block;
+    color:#fff;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.navMenu{
+
+    position:fixed;
+
+    top:85px;
+
+    right:-100%;
+
+    width:300px;
+
+    height:calc(100vh - 85px);
+
+    background:#081028;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    padding-top:50px;
+
+    gap:35px;
+
+    transition:.4s;
+
+    border-left:1px solid rgba(255,255,255,.08);
+
+}
+
+.navMenu.active{
+
+    right:0;
+
+}
+
+.bookBtn{
+
+    display:none;
+
+}
+
+/* Hero */
+
+.hero{
+
+    padding-top:140px;
+
+}
+
+.heroContainer{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.heroButtons{
+
+    justify-content:center;
+
+}
+
+.heroStats{
+
+    justify-content:center;
+
+}
+
+.heroImage{
+
+    order:-1;
+
+}
+
+.heroImage img{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+.floatingCard{
+
+    left:20px;
+
+    bottom:20px;
+
+}
+
+/* Booking */
+
+.booking{
+
+    margin-top:0;
+
+}
+
+.bookingForm{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.searchBtn{
+
+    grid-column:span 2;
+
+}
+
+/* Why Us */
+
+.whyGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.whyImage{
+
+    order:-1;
+
+}
+
+/* Testimonials */
+
+.testimonialWrapper{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+/* Footer */
+
+.footerGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.newsletterForm{
+
+    flex-direction:column;
+
+}
+
+.newsletterForm button{
+
+    width:100%;
+
+}
+
+}
+
+/*=========================================
+        TABLET (768px)
+==========================================*/
+
+@media (max-width:768px){
+
+.sectionTitle h2{
+
+    font-size:2.3rem;
+
+}
+
+.heroContent h1{
+
+    font-size:3rem;
+
+}
+
+.heroButtons{
+
+    flex-direction:column;
+
+}
+
+.heroButtons a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.heroStats{
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+.bookingTabs{
+
+    flex-wrap:wrap;
+
+}
+
+.bookingForm{
+
+    grid-template-columns:1fr;
+
+}
+
+.searchBtn{
+
+    grid-column:auto;
+
+}
+
+.destinationGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.hotelGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.packageGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.galleryGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.testimonialWrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.features{
+
+    grid-template-columns:1fr;
+
+}
+
+.statsGrid{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.footerGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.newsletterBox{
+
+    padding:45px 30px;
+
+}
+
+.newsletterBox h2{
+
+    font-size:2.2rem;
+
+}
+
+}
+
+/*=========================================
+        MOBILE (576px)
+==========================================*/
+
+@media (max-width:576px){
+
+nav{
+
+    height:75px;
+
+}
+
+.navMenu{
+
+    top:75px;
+
+    width:100%;
+
+    height:calc(100vh - 75px);
+
+}
+
+.hero{
+
+    padding-top:120px;
+
+}
+
+.heroContent h1{
+
+    font-size:2.3rem;
+
+}
+
+.heroContent p{
+
+    font-size:.95rem;
+
+}
+
+.badge{
+
+    font-size:.85rem;
+
+}
+
+.primaryBtn,
+.secondaryBtn{
+
+    padding:14px 20px;
+
+}
+
+.heroStats{
+
+    flex-direction:column;
+
+}
+
+.heroStats h2{
+
+    font-size:1.8rem;
+
+}
+
+.floatingCard{
+
+    position:relative;
+
+    left:0;
+
+    bottom:0;
+
+    margin-top:20px;
+
+}
+
+.bookingCard{
+
+    padding:25px;
+
+}
+
+.bookingTabs{
+
+    flex-direction:column;
+
+}
+
+.bookingTabs .tab{
+
+    width:100%;
+
+}
+
+.sectionTitle h2{
+
+    font-size:2rem;
+
+}
+
+.sectionTitle p{
+
+    font-size:.95rem;
+
+}
+
+.destinationCard img{
+
+    height:350px;
+
+}
+
+.hotelImage img{
+
+    height:230px;
+
+}
+
+.packageImage img{
+
+    height:230px;
+
+}
+
+.galleryGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.galleryItem img{
+
+    height:260px;
+
+}
+
+.client{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.client img{
+
+    margin:auto;
+
+}
+
+.newsletterBox{
+
+    padding:35px 20px;
+
+}
+
+.newsletterBox h2{
+
+    font-size:1.8rem;
+
+}
+
+.newsletterForm input{
+
+    width:100%;
+
+}
+
+.footerLogo{
+
+    font-size:1.7rem;
+
+}
+
+.scrollTop{
+
+    width:48px;
+
+    height:48px;
+
+    right:18px;
+
+    bottom:18px;
+
+}
+
+}
+
+/*=========================================
+        SMALL MOBILE (400px)
+==========================================*/
+
+@media (max-width:400px){
+
+.heroContent h1{
+
+    font-size:2rem;
+
+}
+
+.heroContent p{
+
+    font-size:.9rem;
+
+}
+
+.heroButtons{
+
+    gap:15px;
+
+}
+
+.heroStats{
+
+    gap:20px;
+
+}
+
+.bookingCard{
+
+    padding:20px;
+
+}
+
+.sectionTitle h2{
+
+    font-size:1.8rem;
+
+}
+
+.hotelContent{
+
+    padding:20px;
+
+}
+
+.packageContent{
+
+    padding:20px;
+
+}
+
+.testimonialCard{
+
+    padding:25px;
+
+}
+
+.newsletterBox{
+
+    padding:30px 15px;
+
+}
+
+.newsletterBox h2{
+
+    font-size:1.6rem;
+
+}
+
+.footerGrid{
+
+    gap:30px;
+
+}
+
+.footerBottom{
+
+    font-size:.9rem;
+
+}
+
+}
